@@ -40,3 +40,23 @@ Una aplicación web progresiva (PWA) para gestionar recetas de cocina, con sopor
 ```bash
 git clone https://github.com/tuusuario/recetario-pwa.git
 cd recetario-pwa
+```
+
+2. Instala las dependencias del backend
+```bash
+cd backend
+npm install
+node index.js
+```
+
+3. Abre frontend
+```bash
+cd ../frontend
+```
+
+4. Luego abre index.html en tu navegador o usa una extensión como Live Server en VSCode.
+
+🧑‍💻 Autor
+José Armando Guzmán Blanco
+Estudiante de Ingeniería en Sistemas Computacionales
+📧 Contacto: https://www.linkedin.com/in/josearmandogb/
