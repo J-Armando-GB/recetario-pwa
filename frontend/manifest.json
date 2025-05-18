@@ -1,0 +1,22 @@
+{
+  "name": "Recetario PWA",
+  "short_name": "Recetario",
+  "start_url": "/frontend/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#007bff",
+  "orientation": "portrait",
+  "lang": "es-MX",
+  "icons": [
+    {
+      "src": "/frontend/assets/icons/icon-1.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/frontend/assets/icons/icon-2.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

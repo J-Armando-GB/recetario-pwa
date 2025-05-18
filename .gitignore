@@ -1,0 +1,7 @@
+# Node modules
+node_modules/
+
+# Archivos temporales
+*.log
+.env
+.DS_Store

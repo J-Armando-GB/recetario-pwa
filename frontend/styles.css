@@ -1,0 +1,210 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+}
+
+h1 {
+  font-weight: 600;
+}
+
+.card {
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.05);
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-body {
+  padding-bottom: 0.5rem;
+}
+
+.card-footer {
+  border-top: 1px solid #dee2e6;
+  background-color: inherit;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.btn-editar {
+  border-color: #0d6efd;
+  color: #0d6efd;
+}
+
+.btn-editar:hover {
+  background-color: #0d6efd;
+  color: white;
+}
+
+.btn-eliminar {
+  border-color: #dc3545;
+  color: #dc3545;
+}
+
+.btn-eliminar:hover {
+  background-color: #dc3545;
+  color: white;
+}
+
+.connection-status {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+}
+
+.toast {
+  z-index: 2000;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+input, select {
+  border-radius: 0.5rem !important;
+}
+
+#buscador::placeholder {
+  color: #999;
+}
+
+.btn-agregar {
+  border: 1px solid #6610f2;
+  color: #6610f2;
+  background-color: transparent;
+  padding: 0.5rem 1.25rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-agregar:hover {
+  background-color: #6610f2;
+  color: white;
+}
+
+
+/* Botón agregar estilo base */
+.btn-agregar {
+  border: 1px solid #6610f2;
+  color: #6610f2;
+  background-color: white;
+  padding: 0.5rem 1.25rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+  z-index: 1000;
+}
+
+/* Hover efecto */
+.btn-agregar:hover {
+  background-color: #6610f2;
+  color: white;
+}
+
+/* FAB en pantallas pequeñas */
+@media (max-width: 768px) {
+  #btn-agregar {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.5rem;
+    padding: 0;
+    text-align: center;
+    line-height: 3.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
+  }
+
+  #btn-agregar span.d-md-inline {
+    display: none !important;
+  }
+
+  #btn-agregar span.d-md-none {
+    display: inline !important;
+  }
+}
+
+/* Footer styles */
+footer.footer {
+  font-size: 0.9rem;
+  color: #6c757d;
+  background-color: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+}
+
+footer.footer a {
+  color: #6c757d;
+}
+
+footer.footer a:hover {
+  color: #343a40;
+}
+
+/* Footer modo oscuro */
+body.dark-mode footer.footer {
+  background-color: #1e1e1e;
+  border-top: 1px solid #444;
+  color: #bbb;
+}
+
+/* Enlace del footer en modo oscuro */
+body.dark-mode footer.footer a {
+  color: #e0e0e0;
+}
+
+body.dark-mode footer.footer a:hover {
+  color: #ccc;
+}
+
+/* Estilos para modo oscuro */
+body.dark-mode {
+  background-color: #121212;
+  color: #bbb;
+}
+
+.dark-mode .card {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+  border: 1px solid #333;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+.dark-mode .modal-content {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.dark-mode .form-control,
+.dark-mode .form-select {
+  background-color: #2a2a2a;
+  color: white;
+  border-color: #444;
+}
+
+.dark-mode .btn-agregar {
+  background-color: transparent;
+  border-color: #bb86fc;
+  color: #bb86fc;
+}
+
+.dark-mode .btn-agregar:hover {
+  background-color: #bb86fc;
+  color: black;
+}
+
+.dark-mode .btn-outline-secondary {
+  border-color: #ccc;
+  color: #ccc;
+}
+
+.dark-mode .btn-outline-secondary:hover {
+  background-color: #ccc;
+  color: black;
+}
+

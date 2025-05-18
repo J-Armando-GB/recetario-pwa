@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recetario PWA</title>
+
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Icono para la PWA -->
+  <link rel="manifest" href="manifest.json" />
+
+  <!-- Icono para la PWA -->
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#007bff" />
+  <link rel="icon" href="assets/icons/icon-1.png" type="image/png">
+
+
+</head>
+<body>
+  <div class="container py-4">
+      <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+    <h1 class="mb-0">Recetario</h1>
+    <button id="btn-agregar" class="btn btn-agregar" data-bs-toggle="modal" data-bs-target="#modalReceta" title="Agregar Receta">
+      <span class="d-none d-md-inline">➕ Agregar Receta</span>
+      <span class="d-inline d-md-none">+</span>
+    </button>
+
+  </div>
+
+
+    <!-- Filtros de búsqueda -->
+    <div class="row mb-4">
+      <div class="col-md-6 mb-2">
+        <input type="text" id="buscador" class="form-control form-control-lg" placeholder="🔍 Buscar por nombre o ingredientes">
+      </div>
+      <div class="col-md-6 mb-2">
+        <select id="filtro-categoria" class="form-select form-select-lg">
+          <option value="">Todas las categorías</option>
+        </select>
+      </div>
+    </div>
+
+
+
+
+    <!-- Contenedor de recetas -->
+    <div id="contenedor-recetas" class="row g-4">
+      <!-- Aquí irán las tarjetas de recetas -->
+    </div>
+  </div>
+
+  <!-- Modal para agregar receta -->
+  <div class="modal fade" id="modalReceta" tabindex="-1" aria-labelledby="modalRecetaLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form id="form-receta">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalRecetaLabel">Nueva Receta</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            <input type="text" class="form-control mb-2" placeholder="Nombre" name="nombre" required />
+            <textarea class="form-control mb-2" placeholder="Ingredientes" name="ingredientes" required></textarea>
+            <textarea class="form-control mb-2" placeholder="Pasos" name="pasos" required></textarea>
+            <input type="text" class="form-control mb-2" placeholder="Categoría" name="categoria" required />
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-success">Guardar</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Agregar en el body -->
+  <div class="connection-status">
+    <div id="onlineStatus" class="badge bg-success d-none">Online</div>
+    <div id="offlineStatus" class="badge bg-danger d-none">Offline</div>
+  </div>
+
+  <!-- Botón para cambiar modo claro/oscuro -->
+  <div class="position-fixed bottom-0 start-0 m-3 z-3">
+    <button id="toggle-dark" class="btn btn-sm btn-outline-secondary">
+      🌙 Modo oscuro
+    </button>
+  </div>
+
+
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- App principal -->
+   <script type="module" src="indexeddb.js"></script>
+  <script type="module" src="app.js"></script>
+
+  <script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('sw.js')
+        .then(reg => {
+          console.log('✅ Service Worker registrado:', reg.scope);
+        })
+        .catch(err => {
+          console.error('❌ Error al registrar el Service Worker:', err);
+        });
+    });
+  }
+  </script>
+
+</body>
+
+<footer class="footer text-center py-4 mt-5 border-top">
+  <div class="container">
+    <p class="mb-1">© 2025 Recetario PWA · Desarrollado por José Armando Guzmán Blanco</p>
+    <p class="mb-0">
+      <a href="https://github.com/J-Armando-GB" target="_blank" class="text-decoration-none text-muted">Repositorio en GitHub</a>
+    </p>
+  </div>
+</footer>
+
+</html>
